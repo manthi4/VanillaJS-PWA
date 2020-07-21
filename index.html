@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Haikugon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#317EFB" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap">
+    <link rel="manifest" href="manifest.webmanifest">
+</head>
+
+<body>
+    <main>
+        <h1>A forray into PWA: </h1>
+        <div class="bluck" id="inputarea">
+            <label for="line1">First line: </label>
+            <input type="text" id="line1"> <br>
+            <label for="line1">Second line: </label>
+            <input type="text" id="line2"><br>
+            <label for="line1">Last line: </label>
+            <input type="text" id="line3">
+            <br><br>
+            <input type="submit" value="Check" id="wuty">
+            <button id="clear">Clear</button>
+            <button value="save" id="save">Save</button>
+        </div>
+        <br>
+        <div class="bluck" id="nativeHaiku">
+            <p>My code does not work</p>
+            <p>Now somehow my code does work</p>
+            <p>I wish I knew why</p>
+        </div>
+
+    </main>
+    <footer>
+        <br><br>
+        <div class=flower>
+            <img src="icons/colorfullife.svg" alt="Could not load" id="flowerr">
+        </div>
+    </footer>
+
+
+
+    <script src="app.js" defer></script>
+
+    
+    <script>
+        /// Launches the service worker.
+        // async function init() {
+            console.log("service worker...")
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register("sw.js")
+                    .then(function () {
+                        console.log('Service worker registered.')
+                    })
+                    .catch(function () {
+                        console.log("service worker register failed")
+                    });
+            } else {
+                console.log("Browser does not support service workers")
+            };
+        // }   
+    </script>
+
+</body>
+
+</html>
