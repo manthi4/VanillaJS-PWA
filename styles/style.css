@@ -23,10 +23,22 @@ body {
 }
 
 #inputarea {
-    background-color: rgba(247, 111, 0, 0.788);
+    background-color: rgba(255, 115, 0, 0.5);
     border: 5px solid white;
     border-radius: 20px;
     padding: 50px;
+}
+
+.hints{
+    display: inline-block;
+}
+
+.inputf{
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-width: 0px;
 }
 
 .button {

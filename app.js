@@ -5,6 +5,10 @@ const checkBtn = document.querySelector('#check');
 const saveBtn = document.querySelector('#save');
 const clearBtn = document.querySelector('#clear');
 const main = document.querySelector('main');
+const line1hint = document.getElementById('line1hint');
+const line2hint = document.getElementById('line2hint');
+const line3hint = document.getElementById('line3hint');
+
 // const url1 = "https://api.wordnik.com/v4/word.json/";
 // const url2 = "/hyphenation?useCanonical=false&limit=50&api_key="
 // const key = "70538348db6b42e43a5181e32070feebc0b303e293ed13a97" // some other key
@@ -85,6 +89,36 @@ function check() {
     console.log(yes)
     return yes
 }
+
+function updatehint(){
+    let line1c = sylbCount(line1.value)
+    line1hint.style = "color: gray";
+    if(line1c === 5){
+        line1hint.style = "color: rgb(0, 255, 0);";
+    }
+    line1hint.innerHTML = `${line1c}`;
+
+    let line2c = sylbCount(line2.value)
+    line2hint.style = "color: gray";
+    if(line2c === 7){
+        line2hint.style = "color: rgb(0, 255, 0);";
+    }
+    line2hint.innerHTML = `${line2c}`;
+
+    let line3c = sylbCount(line3.value)
+    line3hint.style = "color: gray";
+    if(line3c === 5){
+        line3hint.style = "color: rgb(0, 255, 0);";
+    }
+    line3hint.innerHTML = `${line3c}`;
+}
+
+ function clearhint(){
+    line1hint.innerHTML = ``;
+    line2hint.innerHTML = ``;
+    line3hint.innerHTML = ``;
+ }
+
 function sylbCountHelper(word) { /// bruh = {i, words}
     ///This code was taken from Blake Tarter
     ///https://codepen.io/blaketarter/pen/hJICz
@@ -135,12 +169,15 @@ function clear() {
     line1.value = "";
     line2.value = "";
     line3.value = "";
+    
 }
 
 checkBtn.addEventListener('click', check);
 saveBtn.addEventListener('click', save);
 clearBtn.addEventListener('click', clear);
-
+line1.addEventListener("input", updatehint);
+line2.addEventListener("input", updatehint);
+line3.addEventListener("input", updatehint);
 
 // <!--
 
