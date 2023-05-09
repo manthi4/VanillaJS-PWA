@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Haikugon</title>
+    <title>GPT Demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#317EFB" />
     <link rel="stylesheet" type="text/css" href="styles/style.css">
@@ -13,66 +13,37 @@
 
 <body>
     <main>
-        <h1>A forray into PWA: </h1>
+        <h1>Summarization with GPT: </h1>
         <div class="bluck" id="inputarea">
-            <label for="line1">Line one: </label>
-            <input type="text" id="line1" class = "inputf">
+            <p>Input text:</p>
+            <textarea type="text" id="line1" class = "inputf"></textarea>
             <div id="line1hint" class = hints></div>
-            <br>
-            <label for="line1">line two: </label>
-            <input type="text" id="line2" class = "inputf">
-            <div id="line2hint" class = hints></div>
-            <br>
-            <label for="line1">line three: </label>
-            <input type="text" id="line3" class = "inputf">
-            <div id="line3hint" class = hints></div>
             <br><br>
 
-            <button id="check" class="button">Check</button>
+            <!-- <button id="check" class="button">Check</button> -->
             <button id="clear" class="button">Clear</button>
-            <button id="save" class="button">Save</button>
+            <button id="summarize" class="button">Summarize</button>
         </div>
         <br>
         <div class="bluck" id="nativeHaiku">
-            <p>My code does not work</p>
-            <p>Now somehow my code does work</p>
-            <p>I wish I knew why</p>
+            <p>Enter Input text and click "Summarize" to receive a summary</p>
         </div>
 
 
     </main>
     <footer>
         <br><br>
-        <div class=flower>
-            <img src="icons/colorfullife.svg" alt="Could not load" id="flowerr">
+        <div class=logo>
+            <img src="icons/openai-icon.png" alt="Could not load" id="logo">
         </div>
-        <p>VanillaJS-PWA, :) Sumanth Aluri</p>
+        <p>VanillaJS, :) Sumanth Aluri</p>
         <br>
-        <p>Algorithm for syllable counting from https://codepen.io/blaketarter/pen/hJICz </p>
     </footer>
 
 
 
     <script src="app.js" defer></script>
 
-    
-    <script>
-        /// Launches the service worker.
-        // async function init() {
-            console.log("service worker...")
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register("sw.js")
-                    .then(function () {
-                        console.log('Service worker registered.')
-                    })
-                    .catch(function () {
-                        console.log("service worker register failed")
-                    });
-            } else {
-                console.log("Browser does not support service workers")
-            };
-        // }   
-    </script>
 
 </body>
 
