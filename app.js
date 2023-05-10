@@ -71,7 +71,7 @@ function OpenaiFetchAPI(input) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            "prompt": input + "\n\nTl;dr",
+            "prompt": "Summarize the following: \n\n"+ input + "\n\nTl;dr",
             "model" : "text-davinci-003", 
             "max_tokens": 150,
             "temperature": 0.7,

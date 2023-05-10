@@ -8,3 +8,4 @@ The simplest way to do this is by simply starting an https server using python i
 * open terminal
 * navigate to root directory
 * `python -m https.server`
+*open `http://localhost:8000/Index.html` in your browser
